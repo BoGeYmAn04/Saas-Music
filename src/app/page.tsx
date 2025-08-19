@@ -1,8 +1,12 @@
-import { Apper } from "@/components/Apper";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <Apper/>
+      <>
+        <Header/>
+        <Hero />
+      </>
   );
 }
