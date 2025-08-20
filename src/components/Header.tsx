@@ -6,7 +6,7 @@ import Image from "next/image";
 export function Header() {
   const session = useSession();
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 ">
+    <div className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
       <div className=" flex justify-between px-40 py-4 bg-black border-b-1 border-b-orange-500 border-opacity-50">
         <div className="flex gap-4">
           <div>
@@ -19,7 +19,7 @@ export function Header() {
         <div>
           {session.data?.user && (
             <Button
-              className="btn btn-primary bg-white m-2 p-2 rounded-xl hover:bg-slate-300 cursor-pointer"
+              className="btn btn-primary bg-white m-2 p-2 rounded-xl hover:bg-orange-400 cursor-pointer"
               onClick={() => signOut()}
             >
               Log Out
@@ -27,7 +27,7 @@ export function Header() {
           )}
           {!session.data?.user && (
             <Button
-              className="btn btn-primary bg-blue-400 m-2 p-2 rounded-xl hover:bg-white cursor-pointer"
+              className="btn btn-primary bg-orange-400 m-2 p-2 rounded-xl hover:bg-white cursor-pointer"
               onClick={() => signIn()}
             >
               Sign In
